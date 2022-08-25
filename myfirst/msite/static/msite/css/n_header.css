@@ -1,0 +1,30 @@
+.header__block {
+  padding: 1.43rem;
+  background-color: #e9f9ff;
+  margin: 0.71rem 0 0 0;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.header__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.header__link {
+  color: black;
+  margin: 0 1rem 0 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.header__link:last-child {
+  margin: 0;
+}
+.header__link:hover {
+  color: orange;
+}

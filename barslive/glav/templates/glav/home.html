@@ -1,0 +1,25 @@
+{% extends 'glav/base.html' %}
+<!-- Loading static to able use style and etc. -->
+{% load static %}
+
+<!-- Loading costom tags -->
+{% load glav_tags %}
+
+<!-- Link block to use style for this template -->
+{% block style_link %}<link rel="stylesheet" href="{% static 'glav/css/home.css' %}">{% endblock %}
+
+<!-- The main block content which will be used in base.html -->
+{% block content %}
+<section class="home">
+    <div class="container">
+        <div class="home__block">
+            <div class="home__grid grid">
+                <!-- going threw all news and by using item_card template showing them -->
+                {% for n in news %}
+                    {% item_card n %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

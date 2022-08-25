@@ -1,0 +1,24 @@
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="{% url 'home' %}" class="header__logo logo">BARS<span>LIVE</span></a>
+            <nav class="header__nav nav">
+                {% for link in links %}
+                <a href="{{ link.get_ablsolute_url }}" class="nav__link text-hover {% if cat_selected == link.pk %}_selected{% endif %}">{{ link.name }}</a>
+                {% endfor %}
+            </nav>
+            <a href="{% if user.is_authenticated %}{% url 'profile' %}{% else %}{% url 'login' %}{% endif %}" class="header__log">
+                <div class="header__look {% if user.is_authenticated %}logged{% endif %}"></div>
+            </a>
+        </div>
+    </div>
+</header>
+<header class="underhead">
+    <div class="container">
+        <div class="underhead__wrapper">
+            {% for link in links %}
+                <a href="{{ link.get_ablsolute_url }}" class="underhead__link text-hover {% if cat_selected == link.pk %}_selected{% endif %}">{{ link.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</header>

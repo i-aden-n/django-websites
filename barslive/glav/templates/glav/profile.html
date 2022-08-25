@@ -1,0 +1,25 @@
+{% extends 'glav/base.html' %}
+<!-- Loading static to able use style and etc. -->
+{% load static %}
+
+<!-- Loading costom tags -->
+{% load glav_tags %}
+
+<!-- Link block to use style for this template -->
+{% block style_link %}<link rel="stylesheet" href="{% static 'glav/css/register-auth.css' %}">{% endblock %}
+
+<!-- The main block content which will be used in base.html -->
+{% block content %}
+<section class="user">
+    <div class="container">
+        <div class="user__wrapper">
+            <h2 class="user_inf">Имя пользователя: {{ user.username }}</h2>
+            <h2 class="user_inf">Электронный адрес: {{ user.email }}</h2>
+            <h2 class="user_inf">Фамилия: {{ user.last_name }}</h2>
+            <h2 class="user_inf">Имя: {{ user.first_name }}</h2>
+
+            <a href="{% url 'logout' %}" class="user__logout">Logout</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

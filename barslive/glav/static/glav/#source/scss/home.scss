@@ -1,0 +1,16 @@
+@import url('z_null.css');
+@import url('z_header.css');
+@import url('z_footer.css');
+@import url('z_item_card.css');
+
+.home {
+    margin: 1.25rem 0 0 0;
+    &__block {
+        padding: 1.25rem;
+        background-color: #fff;
+    }
+
+    &__grid {
+    }
+}
+

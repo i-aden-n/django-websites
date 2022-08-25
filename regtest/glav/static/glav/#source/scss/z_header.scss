@@ -1,0 +1,38 @@
+.header {
+    background: white;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.625rem 0;
+    }
+
+    &__logo {
+        font-size: 1.5rem;
+    }
+
+    &__nav {
+    }
+
+    &__profile {
+    }
+}
+
+.nav {
+    display: flex;
+    &__elem {
+        margin: 0 1.75rem 0 0;
+        
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+.profile {
+
+    &__left {
+    }
+
+    &__right {
+    }
+}

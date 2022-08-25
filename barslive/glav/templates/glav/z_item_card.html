@@ -1,0 +1,5 @@
+<div class="card">
+    <div class="card__image" style="background-image: url('{{ news.image.url }}');"><div></div></div>
+    <a href="{{ news.get_ablosute_url }}"><p class="card__title text-hover">{{ news.title }}</p></a>
+    <p class="card__date">Опубликовано: {{ news.upload_time | date:'m-d-Y, H:i'}}</p>
+</div>

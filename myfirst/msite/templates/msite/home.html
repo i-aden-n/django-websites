@@ -1,0 +1,12 @@
+{% extends 'msite\base.html' %}
+{% load static %}
+{% load msite_tags %}
+{% block stylelink %} <link rel="stylesheet" href="{% static 'msite/css/home.css' %}"> {% endblock %}
+{% block content %}
+<section class="home">
+    <h2 class="home__title t4">Recent news</h2>
+    {% for n in news %}
+        {% news_card n %}
+    {% endfor %}
+</section>
+{% endblock %}

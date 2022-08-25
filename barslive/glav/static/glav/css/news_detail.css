@@ -1,0 +1,34 @@
+@import url("z_null.css");
+@import url("z_header.css");
+@import url("z_footer.css");
+@import url("z_item_card.css");
+.item {
+  margin: 1.25rem 0 0 0;
+}
+.item__image {
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.item__image div {
+  padding: 56.25% 0 0 0;
+}
+.item__block {
+  padding: 1.25rem;
+  background: #fff;
+}
+.item__inf {
+  margin: 0.625rem 0 0 0;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+.item__paragraph {
+  font-size: 1rem;
+  padding: 0.625rem 0 0 0;
+}
+.item__headline {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0 0;
+}

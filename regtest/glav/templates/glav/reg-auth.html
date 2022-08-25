@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'glav/css/z_null.css' %}">
+    <link rel="stylesheet" href="{% static 'glav/css/reg-auth.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <form class="form" method='POST'enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form__wrapper">
+            <h1 class="form__headline">{{ headline }}</h1>
+            {% for p in form %}
+                <div class="form__field">
+                    <label for="{{ p.id_for_label }}">{{ p.label }}</label>
+                    <p>{{ p }}</p>
+                    <div class="form__errors">{{ p.errors }}</div>
+                </div>
+            {% endfor %}
+            <button class="form__btn" type="submit">{{ button_name }}</button>
+            {% for link in extra_link %}
+                <a href="{% url link.url %}">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+    </form>
+</body>
+</html>

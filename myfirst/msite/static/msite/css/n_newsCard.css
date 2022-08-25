@@ -1,0 +1,28 @@
+.card {
+  margin: 0.71rem 0 0 0;
+  padding: 0.71rem;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: #fff;
+}
+.card__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card__title {
+  font-weight: 300;
+}
+.card__img {
+  width: 100px;
+}
+.card__img div {
+  width: 100%;
+  padding: 133% 0 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

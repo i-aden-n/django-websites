@@ -1,0 +1,14 @@
+{% extends 'glav/base.html' %}
+{% load static %}
+{% load glav_tags %}
+{% block style_link %}<link rel="stylesheet" href="{% static 'glav/css/addnews.css' %}">{% endblock %}
+{% block content %}
+<section class="addingforma">
+    <div class="container">
+        <form action="post" class="addingforma__form form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </form>
+    </div>
+</section>
+{% endblock %}

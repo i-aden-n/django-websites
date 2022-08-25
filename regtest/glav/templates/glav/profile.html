@@ -1,0 +1,14 @@
+{% extends 'glav/base.html' %}
+{% load static %}
+{% block template_style %}<link rel="stylesheet" href="{% static 'glav/css/profile.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <p>{{ user.username }}</p>
+    <p>{{ user.first_name }}</p>
+    <p>{{ user.last_name }}</p>
+    <p>{{ user.gender }}</p>
+    <img src="{% if user.photo %}{{ user.photo.url }}{% endif %}" alt="">
+    <a href="{% url 'logout_user' %}" class="logout">LOGOUT</a>
+    <a href="{% url 'update' %}" class="logout">update</a>
+</div>
+{% endblock %}

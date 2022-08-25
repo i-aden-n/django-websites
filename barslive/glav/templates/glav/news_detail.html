@@ -1,0 +1,25 @@
+{% extends 'glav/base.html' %}
+
+<!-- Loading static to able use style and etc. -->
+{% load static %}
+
+<!-- Loading costom tags -->
+{% load glav_tags %}
+
+<!-- Link block to use style for this template -->
+{% block style_link %} <link rel="stylesheet" href="{% static 'glav/css/news_detail.css' %}"> {% endblock %}
+
+<!-- The main block content which will be used in base.html -->
+{% block content %}
+<section class="item">
+    <div class="container">
+        <div class="item__block">
+            <div class="item__image" style="background-image: url({{news.image.url}});"><div></div></div>
+            <div class="item__inf">Опубликовано: {{ news.upload_time | date:'d-m-Y, H:i' }}; Просмотрено: {{ news.views }}</div>
+            {% autoescape off %}
+            {{ news.text }}
+            {% endautoescape %}
+        </div>
+    </div>
+</section>
+{% endblock %}

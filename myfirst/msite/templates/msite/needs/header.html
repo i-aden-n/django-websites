@@ -1,0 +1,13 @@
+{% load msite_tags %}
+<header class="header">
+    <div class="container">
+        <div class="header__block">
+            <div class="header__links">
+                {% nav_links as navlink %}
+                {% for el in navlink %}
+                    <a href="{% url el.link %}" class="header__link t2">{{ el.name | upper}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</header>

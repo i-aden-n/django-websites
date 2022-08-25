@@ -1,0 +1,57 @@
+@import url('z_null.css');
+@import url('z_header.css');
+@import url('z_footer.css');
+@import url('z_item_card.css');
+
+.form {
+    
+    &__wrapper {
+        max-width: 33.75rem;
+        margin: 1.75rem auto 0 auto;
+        padding: 1.75rem;
+        background: #fff;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    &__forma {
+        margin: 0.625rem 0 0 0;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid black;
+        padding: 0.25rem;
+        margin: .25rem 0 0 0;
+    }
+
+    &__errors {
+        background-color: #ffcd8b;
+        color: red;
+        & .errorlist {
+            padding: 0.25rem;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        text-align: center;
+        padding: .625rem;
+        background-color: #00C7F2;
+        color: #fff;
+        margin: 1.75rem 0 0 0;
+    }
+
+    &__option {
+        margin: .625rem 0 0 0;
+        display: block;
+        width: 100%;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: .625rem;
+    }
+}

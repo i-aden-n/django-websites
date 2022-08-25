@@ -1,0 +1,29 @@
+{% extends 'glav/base.html' %}
+<!-- Loading static to able use style and etc. -->
+{% load static %}
+
+<!-- Loading costom tags -->
+{% load glav_tags %}
+
+<!-- Link block to use style for this template -->
+{% block style_link %}<link rel="stylesheet" href="{% static 'glav/css/register-auth.css' %}">{% endblock %}
+
+<!-- The main block content which will be used in base.html -->
+{% block content %}
+<div class="form">
+    <div class="form__wrapper">
+        <h2 class="form__title">Регистрация</h2>     
+        <form method="POST" class="form">
+            {% csrf_token %}
+            {% for f in form %}
+                <div class="form__forma">
+                    <p>{{ f }}</p>
+                    <div class="form__errors">{{ f.errors }}</div>
+                </div>
+            {% endfor %}
+            <button class="form__btn" type="submit">Зарегистрироваться</button>
+            <a href="{% url 'login' %}" class="form__option">Авторизоваться</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

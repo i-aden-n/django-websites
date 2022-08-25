@@ -1,0 +1,9 @@
+.footer {
+    margin: 1.43rem;
+    &__block {
+        width: 100%;
+        height: 300px;
+        background-color: black;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}

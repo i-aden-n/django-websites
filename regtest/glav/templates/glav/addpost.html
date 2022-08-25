@@ -1,0 +1,12 @@
+{% extends 'glav/base.html' %}
+{% load static %}
+{% block template_style %}<link rel="stylesheet" href="{% static 'glav/css/addpost.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="padding: 0.25rem; background-color: black; color: white;">Submit</button>
+    </form>
+</div>
+{% endblock %}

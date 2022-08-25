@@ -1,0 +1,13 @@
+{% extends 'glav/base.html' %}
+{% load static %}
+{% block template_style %}<link rel="stylesheet" href="{% static 'glav/css/home.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>YOUR posts:</h2>
+    {% for p in posts %}
+        <p>Title: {{ p.title }}</p> 
+        <p>Text: {{ p.text }}</p>
+        <br> 
+        {% endfor %}
+</div>
+{% endblock %}

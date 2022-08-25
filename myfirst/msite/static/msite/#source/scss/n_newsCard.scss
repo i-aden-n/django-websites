@@ -1,0 +1,25 @@
+.card {
+    margin: 0.71rem 0 0 0;
+    padding: 0.71rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: #fff;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 300;
+    }
+
+    &__img {
+        width: 100px;
+        div {
+            width: 100%;
+            padding: 133% 0 0 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+    }
+}

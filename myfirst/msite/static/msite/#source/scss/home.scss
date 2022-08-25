@@ -1,0 +1,16 @@
+@import url("n_null.css");
+@import url("n_header.css");
+@import url("n_footer.css");
+@import url("n_newsCard.css");
+
+.home {
+    margin: 1.43rem 0 0 0;
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #f2f2f2;
+        padding: 0.36rem;
+        background-color: black;
+        display: inline-block;
+    }
+}

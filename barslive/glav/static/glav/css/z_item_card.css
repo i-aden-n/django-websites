@@ -1,0 +1,19 @@
+.card__image {
+  width: 100%;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.card__image div {
+  padding: 56.25% 0 0 0;
+}
+.card__title {
+  margin: 0.5rem 0 0 0;
+  color: #000;
+}
+.card__date {
+  font-weight: 300;
+  margin: 0.25rem 0 0 0;
+  font-size: 0.75rem;
+}
